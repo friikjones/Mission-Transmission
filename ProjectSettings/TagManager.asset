@@ -23,6 +23,7 @@ TagManager:
   - Direita
   - Acao2
   - Music
+  - Light
   layers:
   - Default
   - TransparentFX

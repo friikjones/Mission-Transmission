@@ -1,18 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGJAM_Tr4n5.Mission", "GGJAM_Tr4n5.Mission.csproj", "{DFE7C7AD-674B-90CA-C783-2E0F4FE5070F}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{858d236c-0437-9df9-3f86-3cc6229c6d75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DFE7C7AD-674B-90CA-C783-2E0F4FE5070F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFE7C7AD-674B-90CA-C783-2E0F4FE5070F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFE7C7AD-674B-90CA-C783-2E0F4FE5070F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFE7C7AD-674B-90CA-C783-2E0F4FE5070F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{858d236c-0437-9df9-3f86-3cc6229c6d75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858d236c-0437-9df9-3f86-3cc6229c6d75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

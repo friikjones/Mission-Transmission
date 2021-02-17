@@ -2,8 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
-public class LevelGeneratorScript : MonoBehaviour {
+public class LevelGeneratorScript : MonoBehaviour
+{
 
     //variaveis de identificacao de objetos
     private static int CHAO = 0;
@@ -33,7 +35,7 @@ public class LevelGeneratorScript : MonoBehaviour {
     public GameObject chave;
     public GameObject saida;
 
-    public GameObject GameCamera;
+    public Camera GameCamera;
 
     public int[,] LevelLayout = new int[maxSize, maxSize];
     private int[] levelSize = new int[2];
@@ -41,16 +43,20 @@ public class LevelGeneratorScript : MonoBehaviour {
 
     public int currentLevel = 2;
 
+    public
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         loadLevel(currentLevel);
         CreateLevel();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void CreateLevel()
     {
@@ -62,12 +68,12 @@ public class LevelGeneratorScript : MonoBehaviour {
             }
 
         }
-        /*
-        switch(currentLevel)
+
+        switch (currentLevel)
         {
             case 1:
-                GameCamera.transform.position = new Vector3 (-95.5f , -3.8f, -9.8f);
-            break;
+                GameCamera.transform.position = new Vector3(-95.5f, -3.8f, -9.8f);
+                break;
             case 2:
                 GameCamera.transform.position = new Vector3(-95.5f, -3.8f, -9.8f);
                 break;
@@ -99,7 +105,7 @@ public class LevelGeneratorScript : MonoBehaviour {
             default:
                 GameCamera.transform.position = new Vector3(0, 0, 0);
                 break;
-        }*/
+        }
 
     }
 
@@ -160,10 +166,15 @@ public class LevelGeneratorScript : MonoBehaviour {
     {
         int counter = 0;
         string line;
+        string path = "/Levels/" + level.ToString() + ".txt";
+
 
         // Read the file and display it line by line.  
         System.IO.StreamReader file =
-            new System.IO.StreamReader("Assets/Levels/" + level.ToString() + ".txt");
+            new System.IO.StreamReader(Application.dataPath + path);
+
+        //TextAsset lvl = 
+
         while ((line = file.ReadLine()) != null)
         {
             string[] values = line.Split(' ');

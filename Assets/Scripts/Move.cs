@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {   
@@ -75,6 +76,7 @@ public class Move : MonoBehaviour
             ChecaPosicaoAtual();
             if (comandos[counter] == 5)
             {
+                Debug.Log("Vai tentar apertar o botao");
                 tentaInteragir();
             }
 
@@ -228,15 +230,17 @@ public class Move : MonoBehaviour
 
         if (currentTile == 3) // saida
         {
-            if (lgs.currentLevel != 9)
+            if (lgs.currentLevel != 10)
             {
+                Debug.Log("Entrou no if");
                 lgs.clearLevel();
-                lgs.loadLevel(lgs.currentLevel + 1);
+                lgs.currentLevel += 1;
+                lgs.loadLevel(lgs.currentLevel);
                 lgs.CreateLevel();
             }
             else
             {
-                //a winner is you
+                SceneManager.LoadScene("WINNER");
             }
 
         }
@@ -292,6 +296,7 @@ public class Move : MonoBehaviour
 
     void tentaInteragir()
     {
+        Debug.Log("current position = " + positionAranha[0] + "," + positionAranha[1]);
         int[,] levelLayout = lgs.LevelLayout;
         bool taDoLado = false;
         if (levelLayout[positionAranha[0], positionAranha[1] + 1] == 7)
@@ -300,13 +305,14 @@ public class Move : MonoBehaviour
             taDoLado = true;
         if (levelLayout[positionAranha[0] + 1, positionAranha[1]] == 7)
             taDoLado = true;
-        if (levelLayout[positionAranha[0] - 1, positionAranha[1] + 1] == 7)
+        if (levelLayout[positionAranha[0] - 1, positionAranha[1]] == 7)
             taDoLado = true;
 
         if (taDoLado)
         {
-            GameObject.Find("BotãoGame(Clone)").transform.GetChild(0).gameObject.SetActive(false);
-            GameObject.Find("BotãoGame(Clone)").transform.GetChild(1).gameObject.SetActive(true);
+            Debug.Log("ta do lado");
+            GameObject.Find("BotaoGame(Clone)").transform.GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("BotaoGame(Clone)").transform.GetChild(1).gameObject.SetActive(true);
             AbrePortao("Botao");
         }
         else

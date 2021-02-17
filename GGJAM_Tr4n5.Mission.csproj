@@ -288,15 +288,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ReturnToMenu.cs" />
     <Compile Include="Assets\Scripts\ClickTransmit.cs" />
     <Compile Include="Assets\Scripts\colliderScript.cs" />
     <Compile Include="Assets\Scripts\ComandosScript.cs" />
     <Compile Include="Assets\Scripts\dragdrop.cs" />
+    <Compile Include="Assets\Scripts\ExitGame.cs" />
     <Compile Include="Assets\Scripts\LevelGeneratorScript.cs" />
+    <Compile Include="Assets\Scripts\LightManager.cs" />
     <Compile Include="Assets\Scripts\LoadOnClick.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\MusicManager.cs" />
+    <Compile Include="Assets\Scripts\ReturnToMenu.cs" />
     <Compile Include="Assets\Scripts\RotateItem.cs" />
     <Compile Include="Assets\Scripts\TypeWriter.cs" />
   </ItemGroup>
